@@ -40,7 +40,7 @@ public class BoastScript : MonoBehaviour {
         
         //boast bark
         BoastBark();
-        
+
         //win or lose
         /*if(playerHeadLevel? > NPCHeadLevel)
         {
@@ -53,7 +53,11 @@ public class BoastScript : MonoBehaviour {
         }
         else{
             //send message for player to lose a life
+            LivesController lc = gameObject.GetComponent<LivesController>();
+            lc.LoseLife();
+
             //play player lose boast animation
+
             //play player lose sfx
             loseBoastSound.Play(5);
         }*/
