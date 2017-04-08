@@ -1,10 +1,16 @@
 fileFormatVersion: 2
 guid: d6c07d83da4f18149859082afe3300b8
-timeCreated: 1491353831
+timeCreated: 1491651614
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - boastTextBox: {instanceID: 0}
+  - boastBarkData: {fileID: 11400000, guid: 52cea796b1d5bd343a3e68a19a73bb5f, type: 2}
+  - BoastCanvas: {instanceID: 0}
+  - boastSound: {instanceID: 0}
+  - winBoastSound: {instanceID: 0}
+  - loseBoastSound: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

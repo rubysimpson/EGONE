@@ -7,7 +7,7 @@ public class BoastScript : MonoBehaviour {
 
     //Bark variables
     public Text boastTextBox;
-    //public string[] boastPhrases;
+    public BoastBarkData boastBarkData;
     public Canvas BoastCanvas;
 
     //Audio variables
@@ -65,15 +65,15 @@ public class BoastScript : MonoBehaviour {
 
     public void BoastBark()
     {
-        //randomly select phrase from boastPhrase array
-        int i = Random.Range(0, (boastPhrases.Length));
+        //randomly select phrase from boastBarkData's barkList
+        int i = Random.Range(0, (boastBarkData.barkList.Length));
 
         //instantiate a new textbox from prefab
         Text newBoast = Instantiate(boastTextBox) as Text;
         newBoast.transform.SetParent(BoastCanvas.transform, false);
 
         //put phrase in textbox
-        newBoast.text = boastPhrases[i]; 
+        newBoast.text = boastBarkData.barkList[i]; 
 
         //delete after x seconds
         Destroy(newBoast, 3);

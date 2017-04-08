@@ -455,6 +455,7 @@ MonoBehaviour:
   - other phrase
   - damn
   - abiothgoebf
+  boastBarkData: {fileID: 11400000, guid: 52cea796b1d5bd343a3e68a19a73bb5f, type: 2}
   BoastCanvas: {fileID: 223175483167984318}
   boastSound: {fileID: 82405542297410054}
   winBoastSound: {fileID: 82743073914962990}
@@ -613,7 +614,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1.18, y: 3.92}
-  m_SizeDelta: {x: 28.91, y: 4.34}
+  m_SizeDelta: {x: 28.91, y: 19.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!233 &233452657293619030
 HingeJoint2D:
