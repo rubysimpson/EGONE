@@ -7,7 +7,7 @@ public class BoastScript : MonoBehaviour {
 
     //Bark variables
     public Text boastTextBox;
-    public string[] boastPhrases;
+    //public string[] boastPhrases;
     public Canvas BoastCanvas;
 
     //Audio variables
