@@ -26,6 +26,7 @@ public class BoastScript : MonoBehaviour {
         {
             //CheckNPCProximity();
             Boast();
+            // for testing livescontroller -> livesController.LoseLife();
         }
 	}
 

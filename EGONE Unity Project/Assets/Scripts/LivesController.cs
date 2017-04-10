@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LivesController : MonoBehaviour {
 
@@ -43,10 +44,6 @@ public class LivesController : MonoBehaviour {
     void Restart()
     {
         //player restarts at the start of the level
-
-        //playerLives reset to max
-        //playerLives = 3;
-
-        //actually....is there a way to just reload the level from the start? just do that
+        SceneManager.LoadScene("Level");
     }
 }

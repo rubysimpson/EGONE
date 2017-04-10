@@ -61,9 +61,29 @@ GameObject:
   - component: {fileID: 82405542297410054}
   - component: {fileID: 82543107202591032}
   - component: {fileID: 82743073914962990}
+  - component: {fileID: 114422700272194356}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1743938917495428
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4615573626707992}
+  - component: {fileID: 20698723046967334}
+  - component: {fileID: 92080797871779194}
+  - component: {fileID: 124855707167604514}
+  - component: {fileID: 81131164703642780}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +114,7 @@ Transform:
   m_GameObject: {fileID: 1431791561846058}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.604, z: 0}
-  m_LocalScale: {x: 0.8386761, y: 0.8386761, z: 0.8386761}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4567977797823686}
   m_RootOrder: 1
@@ -108,7 +128,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4615573626707992}
   m_Father: {fileID: 4567977797823686}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -119,7 +140,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1484650188138960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.91, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4404796879500062}
@@ -128,6 +149,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4615573626707992
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1743938917495428}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -2.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4404796879500062}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &20698723046967334
+Camera:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1743938917495428}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!50 &50247281021992340
 Rigidbody2D:
   serializedVersion: 4
@@ -139,7 +207,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 3
   m_LinearDrag: 0.5
   m_AngularDrag: 0.1
   m_GravityScale: 0
@@ -147,7 +215,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!50 &50324899446625528
 Rigidbody2D:
   serializedVersion: 4
@@ -159,10 +227,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 10
   m_LinearDrag: 0.5
   m_AngularDrag: 0.01
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -196,6 +264,13 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!81 &81131164703642780
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1743938917495428}
+  m_Enabled: 1
 --- !u!82 &82405542297410054
 AudioSource:
   m_ObjectHideFlags: 1
@@ -436,6 +511,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!92 &92080797871779194
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1743938917495428}
+  m_Enabled: 1
+--- !u!114 &114422700272194356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1484650188138960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2bdbe2166dd21c4b9b6495d6466ddb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 1431791561846058}
 --- !u!114 &114461376200090870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -449,17 +543,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boastTextBox: {fileID: 114704511448695876, guid: ba40ca49de02be447adc4172ed418c83,
     type: 2}
-  boastPhrases:
-  - I'm the bes
-  - Stupid sexy flanders
-  - other phrase
-  - damn
-  - abiothgoebf
   boastBarkData: {fileID: 11400000, guid: 52cea796b1d5bd343a3e68a19a73bb5f, type: 2}
   BoastCanvas: {fileID: 223175483167984318}
   boastSound: {fileID: 82405542297410054}
   winBoastSound: {fileID: 82743073914962990}
   loseBoastSound: {fileID: 82543107202591032}
+  livesController: {fileID: 0}
+  scoreController: {fileID: 0}
 --- !u!114 &114632395526289636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -492,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b8c53b1663a80445ae155aadcb0d54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1000
+  speed: 10
 --- !u!114 &114839199903845080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -509,6 +599,13 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!124 &124855707167604514
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1743938917495428}
+  m_Enabled: 1
 --- !u!212 &212396726454134556
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -630,11 +727,11 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: -0.13}
-  m_ConnectedAnchor: {x: 0, y: 0.67}
-  m_UseMotor: 0
+  m_ConnectedAnchor: {x: 0, y: 0.604}
+  m_UseMotor: 1
   m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+    m_MotorSpeed: 10
+    m_MaximumMotorForce: 10
   m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: 0
