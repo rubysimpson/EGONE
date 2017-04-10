@@ -17,8 +17,8 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
 
-        RB.AddForce(new Vector2(x,0));
-        //transform.Translate (x, 0, 0);
+        //RB.AddForce(new Vector2(x,0));
+        transform.Translate (x, 0, 0);
        // transform.Translate(0, 0, z);
 	}
 }
