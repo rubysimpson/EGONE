@@ -621,6 +621,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1038685002 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1484650188138960, guid: a3de35f9c38afce4780acf8660e425c1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1660544423}
+--- !u!114 &1038685008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1038685002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2bdbe2166dd21c4b9b6495d6466ddb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 1188581744}
+--- !u!1 &1188581744 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1431791561846058, guid: a3de35f9c38afce4780acf8660e425c1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1660544423}
 --- !u!1001 &1660544423
 Prefab:
   m_ObjectHideFlags: 0
@@ -688,12 +710,44 @@ Prefab:
     - target: {fileID: 50324899446625528, guid: a3de35f9c38afce4780acf8660e425c1,
         type: 2}
       propertyPath: m_Mass
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 50324899446625528, guid: a3de35f9c38afce4780acf8660e425c1,
         type: 2}
       propertyPath: m_GravityScale
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122747018833922, guid: a3de35f9c38afce4780acf8660e425c1, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122747018833922, guid: a3de35f9c38afce4780acf8660e425c1, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122747018833922, guid: a3de35f9c38afce4780acf8660e425c1, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 233452657293619030, guid: a3de35f9c38afce4780acf8660e425c1,
+        type: 2}
+      propertyPath: m_UseMotor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 233452657293619030, guid: a3de35f9c38afce4780acf8660e425c1,
+        type: 2}
+      propertyPath: m_Motor.m_MotorSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 233452657293619030, guid: a3de35f9c38afce4780acf8660e425c1,
+        type: 2}
+      propertyPath: m_Motor.m_MaximumMotorForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 233452657293619030, guid: a3de35f9c38afce4780acf8660e425c1,
+        type: 2}
+      propertyPath: m_UseLimits
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3de35f9c38afce4780acf8660e425c1, type: 2}
