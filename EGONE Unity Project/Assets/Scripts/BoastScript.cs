@@ -15,6 +15,10 @@ public class BoastScript : MonoBehaviour {
     public AudioSource winBoastSound;
     public AudioSource loseBoastSound;
 
+    //Other GameObjects it impacts
+    public LivesController livesController;
+    public ScoreController scoreController;
+
 	// Update is called once per frame
 	void Update () {
         //if() boastbutton then chck npcproximity
@@ -46,6 +50,8 @@ public class BoastScript : MonoBehaviour {
         {
             //sendmessage to npc to play npc lose animation
             //sendmessage to playerHeadLevel to +1
+            //sendmessage to scorecontroller to BoastSuccessful()
+            scoreController.BoastSuccessful();
             //play player boast win animation
             
             //play win sfx
@@ -53,8 +59,7 @@ public class BoastScript : MonoBehaviour {
         }
         else{
             //send message for player to lose a life
-            LivesController lc = gameObject.GetComponent<LivesController>();
-            lc.LoseLife();
+            livesController.LoseLife();
 
             //play player lose boast animation
 
@@ -78,4 +83,5 @@ public class BoastScript : MonoBehaviour {
         //delete after x seconds
         Destroy(newBoast, 3);
     }
+
 }

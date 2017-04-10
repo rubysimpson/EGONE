@@ -15,4 +15,9 @@ public class NPCController : MonoBehaviour {
     {
         //play lose boast animation - called when player wins a boast
     }
+
+    void ChangeBeenBoasted()
+    {
+        beenBoasted = true;
+    }
 }
