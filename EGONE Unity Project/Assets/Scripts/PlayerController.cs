@@ -10,15 +10,16 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        RB = GetComponent<Rigidbody2D>();
+      //  RB = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        //Move the character along the horrizontal Axis
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
 
-        //RB.AddForce(new Vector2(x,0));
+    
         transform.Translate (x, 0, 0);
-       // transform.Translate(0, 0, z);
+     
 	}
 }
