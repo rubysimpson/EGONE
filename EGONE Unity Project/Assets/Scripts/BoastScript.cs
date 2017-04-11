@@ -19,10 +19,16 @@ public class BoastScript : MonoBehaviour {
     public LivesController livesController;
     public ScoreController scoreController;
 
+    //Counter so you can't boast every second
+    float timeToBoast = 5;
+
 	// Update is called once per frame
 	void Update () {
+        //increasing timeToBoastCounter
+        timeToBoast += Time.deltaTime;
+
         //if() boastbutton then chck npcproximity
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && timeToBoast >= 5)
         {
             //CheckNPCProximity();
             Boast();
@@ -67,6 +73,8 @@ public class BoastScript : MonoBehaviour {
             //play player lose sfx
             loseBoastSound.Play(5);
         }*/
+
+        timeToBoast = 0;
     }
 
     public void BoastBark()
