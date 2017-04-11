@@ -5,15 +5,26 @@ using UnityEngine;
 public class HeadMotorController : MonoBehaviour {
 
     public GameObject head;
-    HingeJoint2D HJ;
+    HingeJoint2D hinge;
 
-	// Use this for initialization
-	void Start () {
-        HJ = GetComponent<HingeJoint2D>();
-	}
+    // Use this for initialization
+    void Start ()
+    {
+        hinge = GetComponent<HingeJoint2D>();
+      
+       
+    }
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+        TiltUp ();
 	}
+
+    void TiltUp ()
+    {
+        //somehow find a way to rotate the head upward
+    }
+
+   
 }
