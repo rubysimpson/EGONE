@@ -16,11 +16,13 @@ public class DeathScript : MonoBehaviour {
 		
 	}
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.tag == "Ground")
+
+        if (other.gameObject.tag == "Ground")
         {
             SceneManager.LoadScene(0);
+            Debug.Log("Dead");
         }
        
     }
