@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour {
 
-    bool beenBoasted = false;
+    public bool beenBoasted = false;
+    public HeadLevelController myHead;
+
 
     void FacePlayer()
     {

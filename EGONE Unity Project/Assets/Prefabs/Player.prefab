@@ -42,6 +42,8 @@ GameObject:
   - component: {fileID: 50324899446625528}
   - component: {fileID: 58403138732549648}
   - component: {fileID: 233452657293619030}
+  - component: {fileID: 114016980633498406}
+  - component: {fileID: 114418819761874954}
   m_Layer: 0
   m_Name: PlayerHead
   m_TagString: Untagged
@@ -249,7 +251,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 1.0495998}
   serializedVersion: 2
-  m_Radius: 1.0638245
+  m_Radius: 1.07
 --- !u!61 &61087071030812718
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -518,6 +520,31 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1743938917495428}
   m_Enabled: 1
+--- !u!114 &114016980633498406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1431791561846058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5cd6f8b86c5bf43bf7b4fa38dddce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114418819761874954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1431791561846058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fac2e49e8abaae47a064dc0633801e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headLevelData: {fileID: 11400000, guid: 01131cfc51ae89542803df7f4ae8f4cc, type: 2}
+  rb: {fileID: 50324899446625528}
+  curLevel: 1
 --- !u!114 &114422700272194356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -550,6 +577,8 @@ MonoBehaviour:
   loseBoastSound: {fileID: 82543107202591032}
   livesController: {fileID: 0}
   scoreController: {fileID: 0}
+  ourHead: {fileID: 114418819761874954}
+  boastRadius: 5
 --- !u!114 &114632395526289636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -684,7 +713,7 @@ Canvas:
   m_GameObject: {fileID: 1874523361663770}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 2
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -701,18 +730,18 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1874523361663770}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4567977797823686}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.18, y: 3.92}
-  m_SizeDelta: {x: 28.91, y: 19.24}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!233 &233452657293619030
 HingeJoint2D:
   m_ObjectHideFlags: 1
@@ -721,18 +750,18 @@ HingeJoint2D:
   m_GameObject: {fileID: 1431791561846058}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 1
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 50247281021992340}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 20000
+  m_BreakTorque: 0
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: -0.13}
-  m_ConnectedAnchor: {x: 0, y: 0.604}
+  m_ConnectedAnchor: {x: 0, y: 0.47399998}
   m_UseMotor: 1
   m_Motor:
-    m_MotorSpeed: 10
+    m_MotorSpeed: 0
     m_MaximumMotorForce: 10
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -35
+    m_UpperAngle: 35

@@ -19,27 +19,67 @@ public class BoastScript : MonoBehaviour {
     public LivesController livesController;
     public ScoreController scoreController;
 
+    //list of all npcs in level
+    private NPCController[] npcs;
+    private NPCController currentTarget;
+
+    public HeadLevelController ourHead;
+
+    public float boastRadius = 5;
+
     //Counter so you can't boast every second
     float timeToBoast = 5;
 
-	// Update is called once per frame
-	void Update () {
+    void Start()
+    {
+        npcs = FindObjectsOfType<NPCController>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         //increasing timeToBoastCounter
         timeToBoast += Time.deltaTime;
 
         //if() boastbutton then chck npcproximity
-        if (Input.GetKeyDown("space") && timeToBoast >= 5)
+        if (Input.GetKeyDown(KeyCode.Space) && timeToBoast >= 5)
         {
-            //CheckNPCProximity();
-            Boast();
+            CheckNPCProximity();
+
+            if (currentTarget != null)
+            {
+                Boast();
+                timeToBoast = 0;
+            }
             // for testing livescontroller -> livesController.LoseLife();
+
         }
-	}
+    }
 
     public void CheckNPCProximity()
     {
         //If NPC (check tag) is within x dis of the direction the player is facing the player can boast to them
         //get someone to help with this probably
+
+        //this needs to be better, it doesn't take into account multiple things being within radius and choosing the best one
+        currentTarget = null;
+
+        for (int i = 0; i < npcs.Length; i++)
+        {
+            //has not been boasted
+            if (npcs[i].beenBoasted)
+            {
+                continue;
+            }
+
+            var dif = ourHead.transform.position - npcs[i].transform.position;
+
+            //is within radius
+            if (dif.magnitude <= boastRadius)
+            {
+                currentTarget = npcs[i];
+            }
+        }
     }
 
     public void Boast()
@@ -48,23 +88,31 @@ public class BoastScript : MonoBehaviour {
 
         //boast sound
         boastSound.Play(); //i don't know if this will work - doublecheck
-        
+
         //boast bark
         BoastBark();
 
+        //we need both the head levels
+        var targetHead = currentTarget.myHead;
+
+
         //win or lose
-        /*if(playerHeadLevel? > NPCHeadLevel)
+        if (ourHead.curLevel > targetHead.curLevel)
         {
             //sendmessage to npc to play npc lose animation
+            targetHead.DecreaseHeadLevel();
+            ourHead.IncreaseHeadLevel();
+            currentTarget.beenBoasted = true;
             //sendmessage to playerHeadLevel to +1
             //sendmessage to scorecontroller to BoastSuccessful()
             scoreController.BoastSuccessful();
             //play player boast win animation
-            
+
             //play win sfx
             winBoastSound.Play(5); //5 is how long it might take for the initial grunt and animation?
         }
-        else{
+        else
+        {
             //send message for player to lose a life
             livesController.LoseLife();
 
@@ -72,7 +120,7 @@ public class BoastScript : MonoBehaviour {
 
             //play player lose sfx
             loseBoastSound.Play(5);
-        }*/
+        }
 
         timeToBoast = 0;
     }
@@ -87,7 +135,7 @@ public class BoastScript : MonoBehaviour {
         newBoast.transform.SetParent(BoastCanvas.transform, false);
 
         //put phrase in textbox
-        newBoast.text = boastBarkData.barkList[i]; 
+        newBoast.text = boastBarkData.barkList[i];
 
         //delete after x seconds
         Destroy(newBoast, 3);
