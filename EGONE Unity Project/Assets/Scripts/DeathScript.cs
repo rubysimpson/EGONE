@@ -1,19 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DeathScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
+	public Canvas LoseCanvas;
+	public PlayerController playControl;
+
+	void Start(){
+		LoseCanvas.enabled = false;
+		playControl = GameObject.FindGameObjectWithTag ("PlayerBody").GetComponent<PlayerController> ();  
 	}
 
     void OnCollisionEnter2D(Collision2D other)
@@ -21,8 +17,9 @@ public class DeathScript : MonoBehaviour {
 
         if (other.gameObject.tag == "Ground")
         {
-            SceneManager.LoadScene(0);
-            Debug.Log("Dead");
+			LoseCanvas.enabled = true;
+			//insert lose audio
+			playControl.enabled = false;
         }
        
     }
