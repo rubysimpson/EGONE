@@ -11,8 +11,14 @@ public class LoseScreen : MonoBehaviour {
 		playControl = GameObject.FindGameObjectWithTag ("PlayerBody").GetComponent<PlayerController> (); 
 	}
 
-	public void ReloadScene(){
-		playControl.enabled = false;
-		SceneManager.LoadScene(1);
+	void Update(){
+		LoseControl ();
+	}
+
+	public void LoseControl(){
+		if (playControl.enabled == false && Input.GetKeyDown(KeyCode.Space)) {
+			playControl.enabled = true;
+			SceneManager.LoadScene(1);
+		}
 	}
 }
