@@ -13,6 +13,6 @@ public class LoseScreen : MonoBehaviour {
 
 	public void ReloadScene(){
 		playControl.enabled = false;
-		SceneManager.LoadScene(0);
+		SceneManager.LoadScene(1);
 	}
 }
