@@ -24,4 +24,9 @@ public class MenuScript : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+
+	public void controlsButton()
+	{
+		SceneManager.LoadScene(3);
+	}
 }
