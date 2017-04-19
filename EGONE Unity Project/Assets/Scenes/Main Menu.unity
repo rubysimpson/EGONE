@@ -306,7 +306,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 299378950}
-        m_MethodName: quitButton
+        m_MethodName: controlsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
