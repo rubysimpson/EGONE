@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-      //  RB = GetComponent<Rigidbody2D>();
+        RB = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
 
     
-        transform.Translate (x, 0, 0);
+		RB.position += Vector2.right * x;
      
 	}
 }
