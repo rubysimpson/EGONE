@@ -8,7 +8,7 @@ public class LoseScreen : MonoBehaviour {
 	public PlayerController playControl;
 
 	void Start(){
-		playControl = GameObject.FindGameObjectWithTag ("PlayerBody").GetComponent<PlayerController> (); 
+		playControl = GameObject.FindGameObjectWithTag ("PlayerBody").GetComponent<PlayerController> ();
 	}
 
 	void Update(){
