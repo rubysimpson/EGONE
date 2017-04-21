@@ -27,12 +27,16 @@ public class BoastScript : MonoBehaviour {
 
     public float boastRadius = 5;
 
+    //Particle System
+    public ParticleSystem ps;
+
     //Counter so you can't boast every second
     float timeToBoast = 5;
 
     void Start()
     {
         npcs = FindObjectsOfType<NPCController>();
+      //  ps = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -49,6 +53,7 @@ public class BoastScript : MonoBehaviour {
             if (currentTarget != null)
             {
                 Boast();
+                ParticleSystem();
                 timeToBoast = 0;
             }
             // for testing livescontroller -> livesController.LoseLife();
@@ -139,6 +144,12 @@ public class BoastScript : MonoBehaviour {
 
         //delete after x seconds
         Destroy(newBoast, 3);
+    }
+
+    public void ParticleSystem()
+    {
+        ps.Stop();
+        ps.Play();
     }
 
 }
