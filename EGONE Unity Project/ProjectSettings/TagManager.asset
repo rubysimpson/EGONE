@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - PlayerBody
   - EndZone
+  - Obstacle
   layers:
   - Default
   - TransparentFX
