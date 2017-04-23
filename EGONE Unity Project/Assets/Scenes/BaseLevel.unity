@@ -517,6 +517,11 @@ RectTransform:
   m_AnchoredPosition: {x: 400.00003, y: 225.09909}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &694715369 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 223697741652208986, guid: 21396ae5098ebee4e8c9e069cc98a5cd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1384672152}
 --- !u!1 &766951199
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +845,7 @@ Prefab:
         type: 2}
       propertyPath: LoseCanvas
       value: 
-      objectReference: {fileID: 642005865}
+      objectReference: {fileID: 694715369}
     - target: {fileID: 114795945780427748, guid: 9e6be44eb300d724db920cdeaad847c0,
         type: 2}
       propertyPath: boastRadius
@@ -861,6 +866,11 @@ Prefab:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 202370683}
+    - target: {fileID: 114660167067362076, guid: 9e6be44eb300d724db920cdeaad847c0,
+        type: 2}
+      propertyPath: WinCanvas
+      value: 
+      objectReference: {fileID: 642005865}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e6be44eb300d724db920cdeaad847c0, type: 2}
   m_IsPrefabParent: 0
