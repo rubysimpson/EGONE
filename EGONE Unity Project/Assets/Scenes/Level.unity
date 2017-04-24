@@ -385,6 +385,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1828103466}
   m_Script: {fileID: 11500000, guid: 6b8c53b1663a80445ae155aadcb0d54b, type: 3}
+--- !u!4 &231096588 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4282486443034946, guid: 9e6be44eb300d724db920cdeaad847c0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828103466}
 --- !u!1001 &284632744
 Prefab:
   m_ObjectHideFlags: 0
@@ -1299,6 +1304,55 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &1094921863 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1592824469699876, guid: 9e6be44eb300d724db920cdeaad847c0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828103466}
+--- !u!114 &1094921864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1094921863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2bdbe2166dd21c4b9b6495d6466ddb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 1960040193}
+  body: {fileID: 231096588}
+  hingeRB: {fileID: 1094921869}
+  hinge: {fileID: 1094921868}
+  motorSpeedScale: 4
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!233 &1094921868 stripped
+HingeJoint2D:
+  m_PrefabParentObject: {fileID: 233884771764013330, guid: 9e6be44eb300d724db920cdeaad847c0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828103466}
+--- !u!50 &1094921869 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50580089273720338, guid: 9e6be44eb300d724db920cdeaad847c0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828103466}
 --- !u!1 &1175953724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,8 +1780,14 @@ Prefab:
       propertyPath: WinCanvas
       value: 
       objectReference: {fileID: 1859889620}
+    - target: {fileID: 50030381538268594, guid: 9e6be44eb300d724db920cdeaad847c0,
+        type: 2}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 95466472082304154, guid: 9e6be44eb300d724db920cdeaad847c0, type: 2}
+    - {fileID: 114092821805577470, guid: 9e6be44eb300d724db920cdeaad847c0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9e6be44eb300d724db920cdeaad847c0, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1844298952
