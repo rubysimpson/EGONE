@@ -1219,11 +1219,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4232173616886178, guid: 9e6be44eb300d724db920cdeaad847c0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 12.8
+      value: -44
       objectReference: {fileID: 0}
     - target: {fileID: 4232173616886178, guid: 9e6be44eb300d724db920cdeaad847c0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.21
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 4232173616886178, guid: 9e6be44eb300d724db920cdeaad847c0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1279,6 +1279,10 @@ Prefab:
       propertyPath: WinCanvas
       value: 
       objectReference: {fileID: 642005865}
+    - target: {fileID: 4144601775746788, guid: 9e6be44eb300d724db920cdeaad847c0, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e6be44eb300d724db920cdeaad847c0, type: 2}
   m_IsPrefabParent: 0
