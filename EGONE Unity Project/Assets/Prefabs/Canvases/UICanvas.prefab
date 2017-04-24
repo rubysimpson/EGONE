@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114270032555806604}
   - component: {fileID: 114455296482198824}
   - component: {fileID: 114748905282389768}
+  - component: {fileID: 114761817735537388}
   m_Layer: 5
   m_Name: WinCanvas
   m_TagString: Untagged
@@ -59,6 +60,7 @@ GameObject:
   - component: {fileID: 114618214696163426}
   - component: {fileID: 114101748097950104}
   - component: {fileID: 114597841002553882}
+  - component: {fileID: 114192578792840432}
   m_Layer: 5
   m_Name: LoseCanvas
   m_TagString: Untagged
@@ -370,6 +372,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114192578792840432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1366572202364520}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92b3228b976c55344ae27b2508639d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playControl: {fileID: 0}
 --- !u!114 &114222282767879044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -847,6 +861,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23f01c5a1f73a974f9fe0a93b499dee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114761817735537388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1021122753689494}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b16436f56ec82418ae373d50c9a17d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114856977554083620

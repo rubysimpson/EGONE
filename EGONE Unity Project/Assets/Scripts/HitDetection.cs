@@ -23,6 +23,7 @@ public class HitDetection : MonoBehaviour {
 
         if (other.gameObject.tag == "Ground")
         {
+            FindObjectOfType<LoseScreen>().enabled = true;
 			LoseCanvas.enabled = true;
 			//insert lose audio
 			playControl.enabled = false;
@@ -31,6 +32,7 @@ public class HitDetection : MonoBehaviour {
         }
         if (other.gameObject.tag == "EndZone")
         {
+            FindObjectOfType<WinScreen>().enabled = true;
             WinCanvas.enabled = true;
             //insert lose audio
             playControl.enabled = false;

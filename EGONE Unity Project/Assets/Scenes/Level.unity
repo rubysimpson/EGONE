@@ -91,52 +91,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &2930218
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2930220}
-  - component: {fileID: 2930219}
-  m_Layer: 5
-  m_Name: SceneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2930219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2930218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b3228b976c55344ae27b2508639d82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playControl: {fileID: 231096580}
---- !u!224 &2930220
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2930218}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.94625, y: 0.94625, z: 0.94625}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400.00003, y: 225.09909}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &86876650
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,12 +333,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1602951252466318, guid: 9e6be44eb300d724db920cdeaad847c0,
     type: 2}
   m_PrefabInternal: {fileID: 1828103466}
---- !u!114 &231096580 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114051662704269488, guid: 9e6be44eb300d724db920cdeaad847c0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1828103466}
-  m_Script: {fileID: 11500000, guid: 6b8c53b1663a80445ae155aadcb0d54b, type: 3}
 --- !u!1001 &284632744
 Prefab:
   m_ObjectHideFlags: 0
@@ -1264,7 +1212,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1175953726
 MonoBehaviour:
