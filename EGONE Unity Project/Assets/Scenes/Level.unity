@@ -1573,16 +1573,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114795945780427748, guid: 9e6be44eb300d724db920cdeaad847c0,
-        type: 2}
-      propertyPath: livesController
-      value: 
-      objectReference: {fileID: 899295174}
-    - target: {fileID: 114795945780427748, guid: 9e6be44eb300d724db920cdeaad847c0,
-        type: 2}
-      propertyPath: scoreController
-      value: 
-      objectReference: {fileID: 899295176}
     - target: {fileID: 114660167067362076, guid: 9e6be44eb300d724db920cdeaad847c0,
         type: 2}
       propertyPath: LoseCanvas
@@ -1593,6 +1583,16 @@ Prefab:
       propertyPath: WinCanvas
       value: 
       objectReference: {fileID: 1859889620}
+    - target: {fileID: 114795945780427748, guid: 9e6be44eb300d724db920cdeaad847c0,
+        type: 2}
+      propertyPath: livesController
+      value: 
+      objectReference: {fileID: 899295174}
+    - target: {fileID: 114795945780427748, guid: 9e6be44eb300d724db920cdeaad847c0,
+        type: 2}
+      propertyPath: scoreController
+      value: 
+      objectReference: {fileID: 899295176}
     - target: {fileID: 1289625083365756, guid: 9e6be44eb300d724db920cdeaad847c0, type: 2}
       propertyPath: m_Name
       value: Player
