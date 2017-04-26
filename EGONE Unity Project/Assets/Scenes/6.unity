@@ -1172,7 +1172,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 582f88d56d79e7f4e9067c09a0c452a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1444612318}
+  player: {fileID: 2035510042}
   offset: {x: 0, y: 0, z: 0}
 --- !u!1001 &1302310924
 Prefab:
@@ -1355,11 +1355,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21396ae5098ebee4e8c9e069cc98a5cd, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1444612318 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1289625083365756, guid: 9e6be44eb300d724db920cdeaad847c0,
-    type: 2}
-  m_PrefabInternal: {fileID: 2035510041}
 --- !u!1001 &1765415148
 Prefab:
   m_ObjectHideFlags: 0
@@ -1482,6 +1477,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e6be44eb300d724db920cdeaad847c0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2035510042 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1602951252466318, guid: 9e6be44eb300d724db920cdeaad847c0,
+    type: 2}
+  m_PrefabInternal: {fileID: 2035510041}
 --- !u!1001 &2049639952
 Prefab:
   m_ObjectHideFlags: 0
