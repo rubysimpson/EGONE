@@ -30,9 +30,6 @@ public class BoastScript : MonoBehaviour {
     //Particle System
     public ParticleSystem ps;
 
-    //Counter so you can't boast every second
-    float timeToBoast = 5;
-
     void Start()
     {
         npcs = FindObjectsOfType<NPCController>();
@@ -42,11 +39,9 @@ public class BoastScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //increasing timeToBoastCounter
-        timeToBoast += Time.deltaTime;
 
         //if() boastbutton then chck npcproximity
-        if (Input.GetKeyDown(KeyCode.Space) && timeToBoast >= 5)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             CheckNPCProximity();
 
@@ -54,7 +49,6 @@ public class BoastScript : MonoBehaviour {
             {
                 Boast();
                 ParticleSystem();
-                timeToBoast = 0;
             }
             // for testing livescontroller -> livesController.LoseLife();
 
@@ -126,8 +120,6 @@ public class BoastScript : MonoBehaviour {
             //play player lose sfx
             loseBoastSound.Play(5);
         }
-
-        timeToBoast = 0;
     }
 
     public void BoastBark()
