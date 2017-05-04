@@ -757,6 +757,26 @@ Prefab:
       propertyPath: WinCanvas
       value: 
       objectReference: {fileID: 642005865}
+    - target: {fileID: 114795945780427748, guid: 9e6be44eb300d724db920cdeaad847c0,
+        type: 2}
+      propertyPath: failSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cb5afdbbf2264654586a907435291415, type: 3}
+    - target: {fileID: 114795945780427748, guid: 9e6be44eb300d724db920cdeaad847c0,
+        type: 2}
+      propertyPath: failSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ed8ac0b970c7da748b4dfdade56af611, type: 3}
+    - target: {fileID: 114795945780427748, guid: 9e6be44eb300d724db920cdeaad847c0,
+        type: 2}
+      propertyPath: failSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c1acfcfcf8a8284a8e8c708f5a3b21e, type: 3}
+    - target: {fileID: 114795945780427748, guid: 9e6be44eb300d724db920cdeaad847c0,
+        type: 2}
+      propertyPath: failSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1532d9a041e51554ca5ea3d8abfda497, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e6be44eb300d724db920cdeaad847c0, type: 2}
   m_IsPrefabParent: 0

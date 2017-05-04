@@ -10,10 +10,13 @@ public class BoastScript : MonoBehaviour {
     public BoastBarkData boastBarkData;
     public Canvas BoastCanvas;
 
+   
+
     //Audio variables
     public AudioSource boastSound;
     public AudioSource winBoastSound;
     public AudioSource loseBoastSound;
+ 
 
     //Other GameObjects it impacts
     public LivesController livesController;
@@ -33,6 +36,7 @@ public class BoastScript : MonoBehaviour {
     void Start()
     {
         npcs = FindObjectsOfType<NPCController>();
+        
       //  ps = GetComponent<ParticleSystem>();
     }
 
@@ -144,4 +148,5 @@ public class BoastScript : MonoBehaviour {
         ps.Play();
     }
 
+    
 }
